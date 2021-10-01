@@ -1,0 +1,8 @@
+#! /usr/bin/env node
+
+const { program } = require("commander");
+const package = require("../package");
+
+program.version(package.version);
+
+// console.log("Hello world")
