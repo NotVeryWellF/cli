@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/NotVeryWellF/cli/issues"
   },
-  "homepage": "https://github.com/NotVeryWellF/cli#readme"
+  "homepage": "https://github.com/NotVeryWellF/cli#readme",
+  "dependencies": {
+    "@types/node": "^16.10.2"
+  }
 }
