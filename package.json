@@ -23,6 +23,7 @@
   "homepage": "https://github.com/NotVeryWellF/cli#readme",
   "dependencies": {
     "@notverywellc/dev-server": "0.0.5",
+    "@notverywellc/fire.app": "0.0.1",
     "@notverywellc/templates": "0.0.2",
     "@types/node": "^16.10.2",
     "commander": "^8.2.0",
