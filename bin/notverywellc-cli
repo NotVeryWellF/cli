@@ -4,17 +4,15 @@ const { program } = require("commander");
 const package = require("../package");
 
 program.version(package.version);  // Version command
-program.option("--init, -I", "Initialize project")  // Initialize project
+program.option("--init", "Initialize project")  // Initialize project
 program.usage('[command] [options]')
 program.parse();
 
 const options = program.opts();
 
-
 if (options.init) {
-    require('child_process').execSync('npm i react react-dom', { stdio: 'inherit' });
+    require('child_process').execSync('npm i react react-dom @notverywellc/dev-server', { stdio: 'inherit' });
     const path = require('path')
     const packagepath = path.resolve('package.json')
     const package = require(packagepath)
-    console.log(package);
 }
