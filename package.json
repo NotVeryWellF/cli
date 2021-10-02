@@ -23,6 +23,7 @@
   "homepage": "https://github.com/NotVeryWellF/cli#readme",
   "dependencies": {
     "@notverywellc/dev-server": "0.0.3",
+    "@notverywellc/templates": "0.0.1",
     "@types/node": "^16.10.2",
     "commander": "^8.2.0",
     "react": "^17.0.2",
