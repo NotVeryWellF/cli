@@ -5,6 +5,8 @@ const package = require("../package");
 
 program.version(package.version);  // Version command
 program.option("--init", "Initialize project")  // Initialize project
+program.option("--server", "Start server")  // Starts server
+program.option("-P, --port <port>", "Port of the server", 8000)  // Choose port of the server, standard = 8000
 program.usage('[command] [options]')
 program.parse();
 
@@ -15,4 +17,9 @@ if (options.init) {
     const path = require('path')
     const packagepath = path.resolve('package.json')
     const package = require(packagepath)
+}
+
+if (options.server) {
+    const startServer = require("@notverywellc/dev-server")
+    startServer({port: options.port})
 }
