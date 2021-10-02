@@ -13,7 +13,7 @@ program.parse();
 const options = program.opts();
 
 if (options.init) {
-    require('child_process').execSync('npm i react react-dom @notverywellc/dev-server', { stdio: 'inherit' });
+    require('child_process').execSync('npm i react react-dom @notverywellc/dev-server@latest', { stdio: 'inherit' });
     const path = require('path')
     const packagepath = path.resolve('package.json')
     const package = require(packagepath)
