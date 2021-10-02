@@ -9,9 +9,10 @@ program.usage('[command] [options]')
 program.parse();
 
 const options = program.opts();
-console.log(options)
+
 
 if (options.init) {
+    require('child_process').execSync('npm i react react-dom', { stdio: 'inherit' });
     const path = require('path')
     const packagepath = path.resolve('package.json')
     const package = require(packagepath)
