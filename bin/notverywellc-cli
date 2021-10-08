@@ -18,7 +18,7 @@ if (options.init) {
     const path = require('path');
     const packagepath = path.resolve('package.json');
     const package = require(packagepath);
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
     package.scripts = package.scripts || {};
     package.scripts.start = "npx notverywellc-cli --server";
     package.scripts.cli_help = "npx notverywellc-cli --help";
