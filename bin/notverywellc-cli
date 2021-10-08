@@ -14,20 +14,7 @@ program.parse();
 const options = program.opts();
 
 if (options.init) {
-    require('child_process').execSync('npm i react react-dom @notverywellc/dev-server@latest @notverywellc/templates@latest @notverywellc/fire.app@latest', { stdio: 'inherit' });
-    const path = require('path');
-    const packagepath = path.resolve('package.json');
-    const package = require(packagepath);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-    package.scripts = package.scripts || {};
-    package.scripts.start = "npx notverywellc-cli --server";
-    package.scripts.cli_help = "npx notverywellc-cli --help";
-    package.scripts.new_version = "npm publish --access public";
-    package.scripts.new_cli = "npm i @notverywellc/cli@latest";
-    package.scripts.patch = "npm version patch";
-    package.scripts.cli_init = "npx notverywellc-cli --init";
-
-    fs.writeFileSync(packagepath, JSON.stringify(package, null, 4))
+    require('../src/init')(options);
 }
 
 if (options.server) {
